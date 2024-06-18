@@ -29,8 +29,14 @@ print-all:
 		$(MAKE) print proj=$$proj --no-print-directory; \
 	done
 
-#Prints build results for specific project
+# Prints build results for specific project
 print:
+	# Unzips project if dir of project not found
+	if [ ! -d "$$proj" ]; then \
+		echo "Unzipping $$proj..."; \
+		unzip "$$proj.zip" > /dev/null 2>&1; \
+	fi; \
+	# Testing build
 	dotnet build $$proj -v q > /dev/null 2>&1; \
 	if [ $$? -eq 0 ]; then \
 		echo "$$proj Build success! :D"; \
