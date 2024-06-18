@@ -1,0 +1,14 @@
+C:\Users\block\Desktop\TestProject\out\TestProject.exe
+C:\Users\block\Desktop\TestProject\out\TestProject.deps.json
+C:\Users\block\Desktop\TestProject\out\TestProject.runtimeconfig.json
+C:\Users\block\Desktop\TestProject\out\TestProject.dll
+C:\Users\block\Desktop\TestProject\out\TestProject.pdb
+C:\Users\block\Desktop\TestProject\obj\Release\net8.0\TestProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\block\Desktop\TestProject\obj\Release\net8.0\TestProject.AssemblyInfoInputs.cache
+C:\Users\block\Desktop\TestProject\obj\Release\net8.0\TestProject.AssemblyInfo.cs
+C:\Users\block\Desktop\TestProject\obj\Release\net8.0\TestProject.csproj.CoreCompileInputs.cache
+C:\Users\block\Desktop\TestProject\obj\Release\net8.0\TestProject.dll
+C:\Users\block\Desktop\TestProject\obj\Release\net8.0\refint\TestProject.dll
+C:\Users\block\Desktop\TestProject\obj\Release\net8.0\TestProject.pdb
+C:\Users\block\Desktop\TestProject\obj\Release\net8.0\TestProject.genruntimeconfig.cache
+C:\Users\block\Desktop\TestProject\obj\Release\net8.0\ref\TestProject.dll
