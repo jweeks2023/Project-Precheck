@@ -1,5 +1,6 @@
 .SILENT:
 
+ZIPS := $(wildcard *.zip)
 PROJECTS := $(wildcard */)
 OUTPUT := res.csv
 
@@ -36,3 +37,6 @@ print:
 	else \
 		echo "$$proj Build fail :("; \
 	fi \
+
+clean:
+	rm -rf $(PROJECTS)
