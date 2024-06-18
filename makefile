@@ -1,7 +1,6 @@
 .SILENT:
 
 ZIPS := $(wildcard *.zip)
-PROJECTS := $(wildcard */)
 OUTPUT := res.csv
 
 # Displays all available rules
@@ -14,7 +13,9 @@ help:
 out:
 	> res.csv
 	echo "Project Name, Pass/Fail" >> $(OUTPUT)
-	for proj in $(PROJECTS); do \
+	for zip in $(ZIPS); do \
+		unzip -n -q $$zip; \
+		proj=$${zip%.zip}; \
 		dotnet build $$proj -v q > /dev/null 2>&1; \
 		if [ $$? -eq 0 ]; then \
 			echo "$$proj, Pass" >> $(OUTPUT); \
@@ -25,18 +26,14 @@ out:
 
 # Prints build results for all projects
 print-all:
-	for proj in $(PROJECTS); do \
-		$(MAKE) print proj=$$proj --no-print-directory; \
+	for zip in $(ZIPS); do \
+		$(MAKE) print zip=$$zip --no-print-directory; \
 	done
 
 # Prints build results for specific project
 print:
-	# Unzips project if dir of project not found
-	if [ ! -d "$$proj" ]; then \
-		echo "Unzipping $$proj..."; \
-		unzip "$$proj.zip" > /dev/null 2>&1; \
-	fi; \
-	# Testing build
+	unzip -n -q $$zip; \
+	proj=$${zip%.zip}; \
 	dotnet build $$proj -v q > /dev/null 2>&1; \
 	if [ $$? -eq 0 ]; then \
 		echo "$$proj Build success! :D"; \
@@ -44,5 +41,10 @@ print:
 		echo "$$proj Build fail :("; \
 	fi \
 
+# Removes project dirs
 clean:
-	rm -rf $(PROJECTS)
+	for zip in $(ZIPS); do\
+		rm -rf $${zip%.zip}; \
+	done
+		
+	
