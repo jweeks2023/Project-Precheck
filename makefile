@@ -7,7 +7,7 @@ OUTPUT := res.csv
 help:
 	echo "out			- Exports build results in csv format"
 	echo "print-all		- Prints build results"
-	echo "print proj=[PROJ_DIR]	- Prints build results of specified project"
+	echo "print zip=[ZIP_DIR]	- Prints build results of specified project"
 
 # Outputs build results for all projects to $(OUTPUT)
 out:
