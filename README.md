@@ -1,3 +1,4 @@
+# ⚠️ ARCHIVED REPO ⚠️ See version in csci-1301 organization
 # Project-Precheck
 A simple makefile to bulk check C# files for issues
 
